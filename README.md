@@ -2,34 +2,41 @@
 
 **BimorShop** is a full-stack marketplace application that allows users to buy and sell products. It features a dynamic catalog, user authentication, product management for sellers, and a favorites system. The application provides a REST API for seamless interaction between the frontend and backend.
 
-## 📋 Key Features
+## Key Features
 
-### 🛒 Marketplace & Products
+### Marketplace & Products
 * **Dynamic Catalog:** View products with images, prices, and categories.
 * **Smart Search:** Search products by name (case-insensitive).
 * **Product Details:** Modal view with detailed information, including seller contacts (Phone, Email).
 * **Seller Badge:** Identify who is selling the item directly in the product card.
 
-### 👤 User Management
+### User Management
 * **Authentication:** Secure Registration and Login system.
 * **Profile Management:** View personal info and manage listed products.
 * **Role System:** Every user can be both a buyer and a seller.
 
-### ❤️ Personalization
+### Personalization
 * **Favorites:** Add/Remove products to/from your wishlist.
 * **My Products:** Manage (Edit/Delete) your own listings easily.
 
-### 🔗 REST API
+### REST API
 * **OpenAPI/Swagger:** Fully documented API endpoints.
 * **CRUD Operations:** Full support for creating, reading, updating, and deleting accounts, products, and orders.
 
 ---
 
-## 🛠 Tech Stack
+### APPLICATION IMAGES
+
+## Registration window
+
+<img width="513" height="579" alt="image" src="https://github.com/user-attachments/assets/4d321350-d433-4bf0-aa79-fae901db0870" />
+
+
+## Tech Stack
 
 ### Backend (Spring Boot)
 * **Language:** Java 17+
-* **Framework:** Spring Boot 3.x
+* **Framework:** Spring Boot 
 * **Database:** PostgreSQL
 * **ORM:** Hibernate / Spring Data JPA
 * **Documentation:** SpringDoc OpenAPI (Swagger)
@@ -43,7 +50,7 @@
 
 ---
 
-## ⚙️ Installation and Launch
+## Installation and Launch
 
 ### Prerequisites
 * Java 17 or newer
@@ -87,14 +94,14 @@ Since the frontend is built with **Vanilla JS**, you don't need `npm` or `node_m
 
 ---
 
-## 🔗 API Documentation
+## API Documentation
 
 After launching the backend application, the interactive Swagger documentation is available at:
 **http://localhost:8080/swagger-ui.html**
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 1.  **Start PostgreSQL** database service.
 2.  **Run Backend:** Execute `mvn spring-boot:run` in the backend folder.
@@ -105,7 +112,7 @@ After launching the backend application, the interactive Swagger documentation i
 
 ---
 
-## 🔧 Configuration
+## Configuration
 
 ### Backend Configuration
 Edit `src/main/resources/application.properties` to match your environment:
