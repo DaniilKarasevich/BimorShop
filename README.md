@@ -31,6 +31,25 @@
 
 <img width="513" height="579" alt="image" src="https://github.com/user-attachments/assets/4d321350-d433-4bf0-aa79-fae901db0870" />
 
+## Login window
+
+<img width="513" height="451" alt="image" src="https://github.com/user-attachments/assets/2f141a3a-6edf-4d8c-8d1f-a7c9e659968c" />
+
+## Main page
+
+<img width="1920" height="879" alt="image" src="https://github.com/user-attachments/assets/234f5610-cb9c-4478-81be-a6ef378662dc" />
+
+## Detailed information
+
+<img width="891" height="551" alt="image" src="https://github.com/user-attachments/assets/432df416-a919-4b5f-a0cd-c06b3963ea54" />
+
+## Profile window
+
+<img width="1920" height="880" alt="image" src="https://github.com/user-attachments/assets/555e77fa-2149-47a3-8a7a-8c15d35bab7f" />
+
+## Add/Edit product window
+
+<img width="1459" height="401" alt="image" src="https://github.com/user-attachments/assets/1d010f1b-e4d9-4f11-8a12-13bf61898730" />
 
 ## Tech Stack
 
