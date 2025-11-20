@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BimorShop — Маркетплейс</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+    <div class="container nav-container">
+        <div class="brand">
+            <i class="fa-solid fa-store"></i> BimorShop
+        </div>
+        <nav class="nav-menu">
+            <button id="btn-home" class="nav-btn active"><i class="fa-solid fa-house"></i> Главная</button>
+            <button id="btn-profile" class="nav-btn"><i class="fa-solid fa-user"></i> Профиль</button>
+            <div class="divider"></div>
+            <button id="btn-login" class="nav-btn btn-primary"><i class="fa-solid fa-right-to-bracket"></i> Войти</button>
+            <button id="btn-logout" class="nav-btn hidden"><i class="fa-solid fa-right-from-bracket"></i> Выход</button>
+        </nav>
+    </div>
+</header>
+
+<main class="container" id="main">
+    <section id="catalog-view" class="view-section">
+        <div class="section-header">
+            <div class="title-group">
+                <h2>Каталог товаров</h2>
+                <p class="subtitle">Найдите то, что вам нужно</p>
+            </div>
+            <div class="filters-bar" style="flex-grow: 1; max-width: 600px;">
+                <div class="input-icon" style="width: 100%;">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input id="search-input" placeholder="Поиск товаров..." />
+                </div>
+                <button id="btn-filter" class="btn-primary">Найти</button>
+                <button id="btn-clear-filter" class="btn-ghost" title="Сбросить"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+        <div id="products-grid" class="grid">
+        </div>
+    </section>
+
+    <section id="profile-view" class="view-section hidden">
+        <div class="profile-header-card">
+            <div class="avatar-placeholder">
+                <i class="fa-solid fa-user-astronaut"></i>
+            </div>
+            <div id="account-info" class="account-details">
+            </div>
+        </div>
+
+        <div class="tabs-section">
+            <h3><i class="fa-solid fa-heart text-danger"></i> Избранное</h3>
+            <div id="favorites-list" class="grid mini-grid"></div>
+        </div>
+
+        <div class="tabs-section">
+            <div class="flex-between">
+                <h3><i class="fa-solid fa-box-open"></i> Мои объявления</h3>
+            </div>
+            <div id="my-products" class="list-view"></div>
+        </div>
+
+        <div class="form-section card">
+            <h3><i class="fa-solid fa-pen-to-square"></i> Добавить / Редактировать</h3>
+            <form id="product-form">
+                <input type="hidden" id="product-id" />
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Название</label>
+                        <input id="product-name" required placeholder="Например: iPhone 15" />
+                    </div>
+                    <div class="form-group">
+                        <label>Цена (BYN)</label>
+                        <input id="product-price" type="number" required min="0" placeholder="0" />
+                    </div>
+                    <div class="form-group">
+                        <label>Категория</label>
+                        <input id="product-category" required placeholder="Электроника" />
+                    </div>
+                    <div class="form-group">
+                        <label>Ссылка на фото</label>
+                        <input id="product-image" placeholder="https://..." />
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" id="btn-save-product" class="btn-primary">Сохранить</button>
+                    <button type="button" id="btn-clear-product" class="btn-secondary">Отмена</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+
+<div id="modal" class="modal-overlay hidden">
+    <div class="modal-window">
+        <button class="modal-close-icon" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+        <div id="modal-body"></div>
+    </div>
+</div>
+
+<div id="auth-modal" class="modal-overlay hidden">
+    <div class="modal-window narrow">
+        <button class="modal-close-icon" id="auth-close"><i class="fa-solid fa-xmark"></i></button>
+
+        <div class="auth-tabs">
+            <button id="show-login" class="auth-tab active">Вход</button>
+            <button id="show-register" class="auth-tab">Регистрация</button>
+        </div>
+
+        <div class="auth-body">
+            <div id="login-form" class="auth-form-container">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input id="login-email" type="email" placeholder="your@email.com"/>
+                </div>
+                <div class="form-group">
+                    <label>Пароль</label>
+                    <input id="login-password" type="password" placeholder="******" />
+                </div>
+                <button id="btn-do-login" class="btn-primary full-width">Войти</button>
+            </div>
+
+            <div id="register-form" class="auth-form-container hidden">
+                <div class="form-row">
+                    <input id="reg-firstName" placeholder="Имя" />
+                    <input id="reg-lastName" placeholder="Фамилия" />
+                </div>
+                <input id="reg-nickname" placeholder="Никнейм" />
+                <input id="reg-phone" placeholder="Телефон" />
+                <input id="reg-email" type="email" placeholder="Email" />
+                <div class="form-row">
+                    <input id="reg-password" type="password" placeholder="Пароль" />
+                    <input id="reg-password2" type="password" placeholder="Повтор" />
+                </div>
+                <button id="btn-do-register" class="btn-primary full-width">Создать аккаунт</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="toast-container"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
